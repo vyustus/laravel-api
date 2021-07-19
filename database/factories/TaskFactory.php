@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Card;
 use App\Models\Task;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +23,8 @@ class TaskFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->word(),
+            'card_id' => Card::factory()
         ];
     }
 }

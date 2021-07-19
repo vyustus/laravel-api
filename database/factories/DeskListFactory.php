@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Desk;
 use App\Models\DeskList;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +23,8 @@ class DeskListFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->word(),
+            'desk_id' => Desk::factory()
         ];
     }
 }
